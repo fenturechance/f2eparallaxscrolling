@@ -16,7 +16,13 @@ export default {
 
 <style lang="scss">
     @import './assets/common';
+    *{
+        padding: 0;
+        margin: 0;
+    }
     #app{
         background-color: $bgblue;
+        min-height: 100vh;
+        position: relative;
     }
 </style>
