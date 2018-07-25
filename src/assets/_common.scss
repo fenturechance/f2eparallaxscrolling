@@ -2,3 +2,15 @@ $bgblue : #155DFF;
 $black : #010000;
 $deepBlue : #0323C3;
 $pink : #FF3478;
+%abcenter {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+%abcenter2 {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}

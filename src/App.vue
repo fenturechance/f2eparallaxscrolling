@@ -19,10 +19,12 @@ export default {
     *{
         padding: 0;
         margin: 0;
+        font-family: sans-serif;
     }
     #app{
         background-color: $bgblue;
         min-height: 100vh;
         position: relative;
+        overflow: hidden;
     }
 </style>
