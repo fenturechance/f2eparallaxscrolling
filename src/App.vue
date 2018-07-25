@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <component :is="$store.state.nowComponent"></component>
   </div>
 </template>
 
@@ -13,6 +14,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    @import './assets/common';
+    #app{
+        background-color: $bgblue;
+    }
 </style>
