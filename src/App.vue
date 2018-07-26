@@ -28,6 +28,25 @@ export default {
         position: relative;
         overflow: hidden;
     }
+    @keyframes vanish {
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes fadeIn {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .vanish{
+        animation: vanish .2s forwards;
+    }
     .circle{
         border-radius: 50%;
     }
@@ -39,6 +58,10 @@ export default {
         border-left: 11vw solid transparent;
     }
     .questionWrapper{
+        width: 30vw;
+        top: 15%;
+        position: absolute;
+        animation: fadeIn 1s forwards;
         h2{
             font-size: 4vw;
             color: $pink;
@@ -51,8 +74,22 @@ export default {
         h4{
             font-weight: normal;
             font-size: 1.3vw;
-            margin: 20px 0;
+            margin: 30px 0;
             color: $deepBlue;
+        }
+    }
+    .shapeWrapper{
+        width: 50vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        transition: .5s;
+        &.slideOut{
+            width: 100vw;
+        }
+        .item{
+            position: absolute;
+            bottom: -200%;
         }
     }
     ul.answerGroup{
@@ -64,6 +101,7 @@ export default {
             margin: 20px 0;
             font-size: 20px;
             color: $w;
+            text-align: center;
             &:hover{
                 background-color: $w;
                 color: $bgblue;
