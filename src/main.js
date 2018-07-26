@@ -15,8 +15,23 @@ const store = new Vuex.Store({
         nowComponent : initAnimation
     },
     mutations: {
-        changeNowComponent(state,component) {
-            state.nowComponent = component;
+        changeNowComponent(state,text) {
+            switch (text) {
+                case 'Q1':
+                    state.nowComponent = Q1;
+                    break;
+                case 'Q2':
+                    state.nowComponent = Q2;
+                    break;
+                case 'Q3':
+                    state.nowComponent = Q3;
+                    break;
+                case 'allDone':
+                    state.nowComponent = allDone;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 })

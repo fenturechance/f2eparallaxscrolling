@@ -16,7 +16,11 @@
 </template>
 <script>
 export default {
-    
+    created() {
+        setTimeout(() => {
+            this.$store.commit('changeNowComponent','Q1');
+        }, 5800);
+    },
 }
 </script>
 <style lang="scss">
@@ -42,7 +46,6 @@ export default {
             background-color: $deepBlue;
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             animation: scale 4s forwards,scalToWindow 1s 4.3s forwards;
         }
         .triangleGroup{
@@ -53,11 +56,6 @@ export default {
             .triangle{
                 @extend %abcenter2;
                 position: absolute;
-                width: 0;
-                height: 0;
-                border-bottom: 20vw solid $pink;
-                border-right: 11vw solid transparent;
-                border-left: 11vw solid transparent;
                 &.t1{
                     transform: translateY(-60%) translateX(-50%);
                 }
