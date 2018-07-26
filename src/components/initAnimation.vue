@@ -19,7 +19,7 @@ export default {
     created() {
         setTimeout(() => {
             this.$store.commit('changeNowComponent','Q1');
-        }, 5800);
+        }, 6000);
     },
 }
 </script>

@@ -11,9 +11,9 @@
             </ul>
         </div>
         <div class="shapeWrapper">
-            <div class="square"></div>
-            <div class="triangle"></div>
-            <div class="circle"></div>
+            <div class="square item"></div>
+            <div class="triangle item"></div>
+            <div class="circle item"></div>
         </div>
     </div>
 </template>
@@ -37,23 +37,34 @@ export default {
             width: 50vw;
             height: 100vh;
             position: absolute;
-            right: 0;
+            right: -100%;
             top: 0;
+            animation: slideIn 1.5s .5s forwards;
+            .item{
+                position: absolute;
+                bottom: -200%;
+            }
             .square{
-                width: 10vw;
-                height: 10vw;
+                width: 15vw;
+                height: 15vw;
                 background-color: $pink;
+                left: 8%;
+                animation: riseS 1.5s 1.5s forwards;
             }
             .triangle{
                 border-bottom-color: $w;
                 border-bottom-width: 10vw;
                 border-right-width: 6vw;
                 border-left-width: 6vw;
+                right: -5%;
+                animation: riseT 1.5s 1.5s forwards;
             }
             .circle{
-                width: 10vw;
-                height: 10vw;
+                width: 42vw;
+                height: 42vw;
                 background-color: $black;
+                right: -15%;
+                animation: riseC 1.5s 1.5s forwards;
             }
         }
     }
@@ -63,6 +74,38 @@ export default {
         }
         100%{
             opacity: 1;
+        }
+    }
+    @keyframes slideIn {
+        0%{
+            right: -100%;
+        }
+        100%{
+            right: 0;
+        }
+    }
+    @keyframes riseS {
+        0%{
+            bottom: -200%;
+        }
+        100%{
+            bottom: 60%;
+        }
+    }
+    @keyframes riseC {
+        0%{
+            bottom: -200%;
+        }
+        100%{
+            bottom: -50%;
+        }
+    }
+    @keyframes riseT {
+        0%{
+            bottom: -200%;
+        }
+        100%{
+            bottom: 40%;
         }
     }
 </style>
